@@ -1,38 +1,103 @@
-# Tukatech digital workflow platform
+# Tukatech Internship Project
 
-A full-stack internship project that extends the Tukatech marketing site with a connected product-development and manufacturing workspace.
+A full-stack web application built during my internship at Tukatech — consisting of a modern redesign of tukatech.com and a TUKAcloud SaaS platform for fashion teams.
 
-## What is included
+## 🔗 Live Demo
+- Frontend: [Coming soon]
+- Backend API: [Coming soon]
 
-- Existing public site: product, hardware, resource, pricing, contact, newsletter, and AI-assistant pages.
-- TUKAcloud: account authentication, team workspaces, Cloudinary file storage, comments, collections, activity feed and analytics.
-- New style workflow: style records, seasons, brands, tags, kanban status, search/filtering, review requests and decisions, and notifications.
-- File enhancements: workspace-safe file access, tags, style association, linked versions, type/size upload validation.
-- Connected operations: fabric-savings estimator, solution finder, and a live-style MES factory dashboard.
-- Demo workspace seeder with four styles and three production orders for presentations.
+## 🛠 Tech Stack
 
-## Local setup
+**Frontend**
+- React 18 + Vite
+- Tailwind CSS
+- Zustand (state management)
+- Recharts (analytics)
+- React Router v6
 
-1. Copy `backend/.env.example` to `backend/.env` and supply MongoDB, Cloudinary, JWT and Gemini credentials.
-2. Copy `frontend/.env.example` to `frontend/.env` when the API is not on the default local address.
-3. Install dependencies in each folder: `npm install`.
-4. Start the API: `cd backend; npm run dev`.
-5. Start the client: `cd frontend; npm run dev`.
+**Backend**
+- Node.js + Express
+- MongoDB + Mongoose
+- JWT Authentication
+- Cloudinary (file storage)
+- Gemini AI (chat assistant)
 
-## Demo flow
+## ✨ Features
 
-Register a workspace owner, open **Style Workflow** (`/styles`), and select **Load demo workspace**. Review the kanban board, visit **Factory MES** (`/factory-dashboard`), and use the public **Solution Finder** and **Fabric Savings** calculator.
+### Marketing Site
+- Full Tukatech.com redesign with 20+ pages
+- Software product pages (TUKAcad, TUKA3D, TUKAcloud, SMARTmark, TUKAstudio, TUKA APM)
+- Hardware pages (TUKAjet, TUKAspread, TUKAcut, TUKAcut Laser, TUKAcut Rotary, TUKA INA)
+- Smart Factories, About, Contact, Resources, Pricing, Testimonials
+- Newsletter signup
+- AI Chat Assistant (Gemini powered)
 
-## Validation
+### TUKAcloud App
+- Company workspace system with invite codes
+- JWT authentication with role-based access
+- File upload, download, delete (Cloudinary)
+- Collections & file search
+- Team management with real members
+- Activity feed
+- Storage analytics with charts
+- Comments on files
+- Password reset
+- Drag & drop file upload
 
-`frontend`: `npm run lint` and `npm run build`.
+## 🚀 Getting Started
 
-`backend`: `node --check server.js` (and the same command can be used on individual source files).
+### Prerequisites
+- Node.js 18+
+- MongoDB Atlas account
+- Cloudinary account
+- Gemini API key
 
-## API highlights
+### Installation
 
-- `GET/POST /api/styles`, `PUT /api/styles/:id`
-- `POST /api/styles/:id/reviews`, `POST /api/styles/:id/reviews/decision`
-- `GET /api/notifications`
-- `GET/POST/PUT /api/production-orders`
-- `POST /api/demo/seed`
+1. Clone the repo
+\`\`\`bash
+git clone https://github.com/ParamChawla/Tukatech-Internship-Project.git
+cd Tukatech-Internship-Project
+\`\`\`
+
+2. Setup backend
+\`\`\`bash
+cd backend
+npm install
+cp .env.example .env
+# Fill in your .env values
+npm run dev
+\`\`\`
+
+3. Setup frontend
+\`\`\`bash
+cd frontend
+npm install
+npm run dev
+\`\`\`
+
+4. Open `http://localhost:5173`
+
+## 📁 Project Structure
+
+\`\`\`
+tukatech/
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   └── server.js
+└── frontend/
+    └── src/
+        ├── components/
+        ├── pages/
+        ├── store/
+        └── lib/
+\`\`\`
+
+## 👨‍💻 Built By
+
+**Param Chawla** — B.Tech ECE, KIIT University  
+[LinkedIn](https://linkedin.com/in/chawla-param) · [GitHub](https://github.com/ParamChawla)
